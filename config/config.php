@@ -55,5 +55,5 @@ if (session_status() === PHP_SESSION_NONE) {
 // ---- Autoload core includes ----
 require_once __DIR__ . '/database.php';
 require_once __DIR__ . '/../includes/functions.php';
-require_once __DIR__ . '/razorpay.php';
+require_once __DIR__ . '/cashfree.php';
 require_once __DIR__ . '/../includes/downloads.php';

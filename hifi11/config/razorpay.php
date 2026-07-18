@@ -1,7 +1,7 @@
 <?php
 
-define('CASHFREE_CLIENT_ID', 'TEST1114263850addbd271ab3288d1dd83624111');
-define('CASHFREE_CLIENT_SECRET', 'cfsk_ma_test_b179a04060db7a64e600421259b828db_432aee16');
+define('CASHFREE_CLIENT_ID', '');
+define('CASHFREE_CLIENT_SECRET', '');
 define('CASHFREE_API_URL', 'https://sandbox.cashfree.com/pg');
 define('CASHFREE_PAYMENT_URL', 'https://payments-sandbox.cashfree.com/checkout/postPayment');
 define('CASHFREE_API_VERSION', '2023-08-01');

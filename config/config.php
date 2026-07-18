@@ -14,7 +14,7 @@ date_default_timezone_set('Asia/Kolkata');
 // ---- Site Info ----
 define('SITE_NAME', 'HIFI11 Academy');
 define('SITE_TAGLINE', 'Premium Digital Bundle Pack');
-define('SITE_URL', 'https://hifi11academy.com'); // TODO: change to your live domain
+define('SITE_URL', 'https://academy.hifi11.in');
 define('SUPPORT_EMAIL', 'support@hifi11academy.com'); // TODO: change to your real support email
 define('SUPPORT_WHATSAPP', '919380386500');
 define('SUPPORT_TELEGRAM', 'https://t.me/devil_heart_hack');
@@ -39,12 +39,8 @@ define('DOWNLOAD_MAX_COUNT', 10); // 0 = unlimited downloads per token; 10 match
 // ---- Secure file storage ----
 // This directory MUST live outside the public web root so nothing
 // under it is ever reachable by a direct URL, regardless of server
-// config. __DIR__ here is /config, so dirname(__DIR__) is the project
-// root (document root); going one level further puts us above it.
-// TODO: on your real host, point this at a path that is genuinely
-// outside the directory your web server serves (e.g. a sibling folder
-// to public_html, not inside it).
-define('SECURE_STORAGE_PATH', dirname(__DIR__, 2) . '/hifi11-secure-storage');
+// config. __DIR__ is config/, so dirname(__DIR__) is the document root.
+define('SECURE_STORAGE_PATH', dirname(__DIR__) . '/hifi11-secure-storage');
 
 // ---- Session bootstrap ----
 if (session_status() === PHP_SESSION_NONE) {

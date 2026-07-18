@@ -43,7 +43,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 'amount_paise'       => $order['amount'],
             ];
 
-            header('Location: process-payment.php');
+            $redirectUrl = CASHFREE_PAYMENT_URL . '?payment_session_id=' . urlencode($order['payment_session_id']);
+            header('Location: ' . $redirectUrl);
             exit;
         } catch (CashfreeException $e) {
             error_log('checkout.php: Cashfree order creation failed: ' . $e->getMessage());

@@ -1,0 +1,63 @@
+<?php
+/**
+ * HIFI11 Academy - Global Configuration
+ * =======================================
+ * Central place for site-wide constants.
+ * Do NOT put database credentials here — see config/database.php
+ */
+
+// ---- Environment ----
+error_reporting(E_ALL);
+ini_set('display_errors', '0'); // set to '1' only while debugging locally
+date_default_timezone_set('Asia/Kolkata');
+
+// ---- Site Info ----
+define('SITE_NAME', 'HIFI11 Academy');
+define('SITE_TAGLINE', 'Premium Digital Bundle Pack');
+define('SITE_URL', 'https://hifi11academy.com'); // TODO: change to your live domain
+define('SUPPORT_EMAIL', 'support@hifi11academy.com'); // TODO: change to your real support email
+define('SUPPORT_WHATSAPP', '919380386500');
+define('SUPPORT_TELEGRAM', 'https://t.me/devil_heart_hack');
+define('SUPPORT_INSTAGRAM', 'https://instagram.com/_devil_heart_hacker');
+
+// ---- Fast2SMS ----
+define('FAST2SMS_API_KEY', 'zPDa2j0X7VvRlTsn6IMUOcWJ49tHBpreQGfCiSbyuLFg5q8KwmaQ4wB8MzWAK3Smt5sRTVvfhULycFXH');
+
+// ---- Product Info ----
+define('PRODUCT_NAME', 'Ethical Hacking Bundle Pack');
+define('PRODUCT_PRICE', 199);       // INR — offer price
+define('PRODUCT_VALUE', 15000);     // INR — "worth" value shown to customer
+define('PRODUCT_CURRENCY', 'INR');
+define('PRODUCT_VERSION', 'v1.0');
+
+// ---- Security ----
+define('CSRF_TOKEN_NAME', 'hifi11_csrf_token');
+define('SESSION_NAME', 'hifi11_session');
+define('DOWNLOAD_TOKEN_TTL', 60 * 60 * 24); // 24 hours validity per generated download link
+define('DOWNLOAD_MAX_COUNT', 10); // 0 = unlimited downloads per token; 10 matches the "10 downloads" option
+
+// ---- Secure file storage ----
+// This directory MUST live outside the public web root so nothing
+// under it is ever reachable by a direct URL, regardless of server
+// config. __DIR__ here is /config, so dirname(__DIR__) is the project
+// root (document root); going one level further puts us above it.
+// TODO: on your real host, point this at a path that is genuinely
+// outside the directory your web server serves (e.g. a sibling folder
+// to public_html, not inside it).
+define('SECURE_STORAGE_PATH', dirname(__DIR__, 2) . '/hifi11-secure-storage');
+
+// ---- Session bootstrap ----
+if (session_status() === PHP_SESSION_NONE) {
+    session_name(SESSION_NAME);
+    session_start([
+        'cookie_httponly' => true,
+        'cookie_samesite' => 'Lax',
+        // 'cookie_secure' => true, // TODO: enable this once you're on HTTPS in production
+    ]);
+}
+
+// ---- Autoload core includes ----
+require_once __DIR__ . '/database.php';
+require_once __DIR__ . '/../includes/functions.php';
+require_once __DIR__ . '/razorpay.php';
+require_once __DIR__ . '/../includes/downloads.php';

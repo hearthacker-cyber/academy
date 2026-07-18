@@ -1,0 +1,9 @@
+# This folder is no longer used to serve the bundle file (see
+# includes/downloads.php / download-file.php — the real file now lives
+# outside the web root entirely, in SECURE_STORAGE_PATH). This
+# .htaccess is defense-in-depth only, in case anything is ever placed
+# here by mistake: deny all direct HTTP access.
+Require all denied
+# Apache 2.2 fallback
+Order allow,deny
+Deny from all

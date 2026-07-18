@@ -1,0 +1,6 @@
+# Belt-and-braces only — this directory should already be outside the
+# web server's document root and therefore unreachable via HTTP. If
+# your host ever serves this folder anyway, this blocks it.
+Require all denied
+Order allow,deny
+Deny from all

@@ -81,6 +81,10 @@ require __DIR__ . '/includes/header.php';
   }
 
   btn.addEventListener('click', openCheckout);
+
+  window.addEventListener('load', function () {
+    setTimeout(openCheckout, 500);
+  });
 })();
 </script>
 

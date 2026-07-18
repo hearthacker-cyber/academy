@@ -7,9 +7,9 @@
  */
 
 define('DB_HOST', 'localhost');
-define('DB_NAME', 'hifi11_academy');
-define('DB_USER', 'root');            // TODO: replace with your DB username
-define('DB_PASS', '');                // TODO: replace with your DB password
+define('DB_NAME', 'u329947844_academy');
+define('DB_USER', 'u329947844_academy');
+define('DB_PASS', 'Academy123@@');
 define('DB_CHARSET', 'utf8mb4');
 
 /**

@@ -48,7 +48,7 @@ if (session_status() === PHP_SESSION_NONE) {
     session_start([
         'cookie_httponly' => true,
         'cookie_samesite' => 'Lax',
-        // 'cookie_secure' => true, // TODO: enable this once you're on HTTPS in production
+        'cookie_secure' => true,
     ]);
 }
 

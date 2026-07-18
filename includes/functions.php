@@ -86,6 +86,7 @@ function formatDate(string $datetime): string
     $ts = strtotime($datetime);
     return $ts ? date('d M Y', $ts) : '';
 }
+<<<<<<< HEAD
 
 /** Send an email using PHP mail() with proper headers */
 function sendMail(string $to, string $subject, string $body): bool
@@ -98,3 +99,5 @@ function sendMail(string $to, string $subject, string $body): bool
              . 'X-Mailer: PHP/' . phpversion();
     return mail($to, $subject, $body, $headers);
 }
+=======
+>>>>>>> 8179ce192d08535196c5e138542df972d599d1ac

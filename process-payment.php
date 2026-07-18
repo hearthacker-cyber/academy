@@ -70,7 +70,11 @@ require __DIR__ . '/includes/header.php';
       return;
     }
     try {
+<<<<<<< HEAD
       var cashfree = Cashfree({ mode: 'production' });
+=======
+      var cashfree = Cashfree({ mode: 'sandbox' });
+>>>>>>> 8179ce192d08535196c5e138542df972d599d1ac
       cashfree.checkout({
         paymentSessionId: sessionId,
         redirectTarget: '_self'

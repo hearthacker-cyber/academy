@@ -16,8 +16,15 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     if (mb_strlen($message) < 10) $errors[] = 'Please describe your issue in a bit more detail.';
 
     if (empty($errors)) {
+<<<<<<< HEAD
         $mailBody = '<p><strong>Name:</strong> ' . e($name) . '</p><p><strong>Email:</strong> ' . e($email) . '</p><p><strong>Issue Type:</strong> ' . e($issueType) . '</p><p><strong>Message:</strong></p><p>' . nl2br(e($message)) . '</p>';
         sendMail(SUPPORT_EMAIL, 'Support Request: ' . $issueType . ' from ' . $name, $mailBody);
+=======
+        // ---------------------------------------------------------------
+        // Replace this section with your ticketing/email service.
+        // mail(SUPPORT_EMAIL, 'Support Request: ' . $issueType, $message);
+        // ---------------------------------------------------------------
+>>>>>>> 8179ce192d08535196c5e138542df972d599d1ac
         $submitted = true;
     }
 }

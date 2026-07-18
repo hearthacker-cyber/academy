@@ -15,8 +15,15 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     if (mb_strlen($message) < 5) $errors[] = 'Please write a short message.';
 
     if (empty($errors)) {
+<<<<<<< HEAD
         $mailBody = '<p><strong>Name:</strong> ' . e($name) . '</p><p><strong>Email:</strong> ' . e($email) . '</p><p><strong>Message:</strong></p><p>' . nl2br(e($message)) . '</p>';
         sendMail(SUPPORT_EMAIL, 'Contact Form Message from ' . $name, $mailBody);
+=======
+        // ---------------------------------------------------------------
+        // Replace this section with your email/notification service.
+        // mail(SUPPORT_EMAIL, 'New Contact Form Message', $message);
+        // ---------------------------------------------------------------
+>>>>>>> 8179ce192d08535196c5e138542df972d599d1ac
         $submitted = true;
     }
 }

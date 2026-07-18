@@ -15,7 +15,11 @@ date_default_timezone_set('Asia/Kolkata');
 define('SITE_NAME', 'HIFI11 Academy');
 define('SITE_TAGLINE', 'Premium Digital Bundle Pack');
 define('SITE_URL', 'https://academy.hifi11.in');
+<<<<<<< HEAD
 define('SUPPORT_EMAIL', 'academy@hifi11.in');
+=======
+define('SUPPORT_EMAIL', 'support@hifi11academy.com'); // TODO: change to your real support email
+>>>>>>> 8179ce192d08535196c5e138542df972d599d1ac
 define('SUPPORT_WHATSAPP', '919380386500');
 define('SUPPORT_TELEGRAM', 'https://t.me/devil_heart_hack');
 define('SUPPORT_INSTAGRAM', 'https://instagram.com/_devil_heart_hacker');
@@ -25,7 +29,11 @@ define('FAST2SMS_API_KEY', 'zPDa2j0X7VvRlTsn6IMUOcWJ49tHBpreQGfCiSbyuLFg5q8KwmaQ
 
 // ---- Product Info ----
 define('PRODUCT_NAME', 'Ethical Hacking Bundle Pack');
+<<<<<<< HEAD
 define('PRODUCT_PRICE', 1);       // INR — offer price (set to 1 for testing)
+=======
+define('PRODUCT_PRICE', 199);       // INR — offer price
+>>>>>>> 8179ce192d08535196c5e138542df972d599d1ac
 define('PRODUCT_VALUE', 15000);     // INR — "worth" value shown to customer
 define('PRODUCT_CURRENCY', 'INR');
 define('PRODUCT_VERSION', 'v1.0');

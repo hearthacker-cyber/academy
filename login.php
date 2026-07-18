@@ -25,7 +25,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             if (!$stmt->fetch()) {
                 $error = 'No account found for this email. Please purchase the bundle first.';
             } else {
+<<<<<<< HEAD
                 sendOtp($email);
+=======
+                sendOtpPlaceholder($email);
+>>>>>>> 8179ce192d08535196c5e138542df972d599d1ac
                 $_SESSION['login_flow'] = ['step' => 'otp', 'email' => $email];
                 $step = 'otp';
                 $info = 'An OTP has been sent to ' . e($email) . '.';
@@ -37,7 +41,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $otp = trim($_POST['otp'] ?? '');
         $email = $_SESSION['login_flow']['email'] ?? '';
 
+<<<<<<< HEAD
         if (verifyOtp($email, $otp)) {
+=======
+        if (verifyOtpPlaceholder($email, $otp)) {
+>>>>>>> 8179ce192d08535196c5e138542df972d599d1ac
             $stmt = getDB()->prepare('SELECT id FROM customers WHERE email = ? LIMIT 1');
             $stmt->execute([$email]);
             $customer = $stmt->fetch();
@@ -55,7 +63,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     if ($action === 'resend_otp') {
         $email = $_SESSION['login_flow']['email'] ?? '';
         if ($email) {
+<<<<<<< HEAD
             sendOtp($email);
+=======
+            sendOtpPlaceholder($email);
+>>>>>>> 8179ce192d08535196c5e138542df972d599d1ac
             $info = 'A new OTP has been sent to ' . e($email) . '.';
         }
     }
@@ -67,6 +79,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     }
 }
 
+<<<<<<< HEAD
 function sendOtp(string $email): void
 {
     $db = getDB();
@@ -105,6 +118,16 @@ function verifyOtp(string $email, string $otp): bool
     $upd = $db->prepare('UPDATE otp_requests SET verified_at = NOW() WHERE id = ?');
     $upd->execute([$row['id']]);
     return true;
+=======
+function sendOtpPlaceholder(string $email): void
+{
+    $_SESSION['login_flow']['otp_debug'] = '123456';
+}
+
+function verifyOtpPlaceholder(string $email, string $otp): bool
+{
+    return $otp === ($_SESSION['login_flow']['otp_debug'] ?? '123456');
+>>>>>>> 8179ce192d08535196c5e138542df972d599d1ac
 }
 
 $pageTitle = 'Login — ' . SITE_NAME;

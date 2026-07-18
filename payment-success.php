@@ -15,6 +15,7 @@ if (empty($_SESSION['payment_result'])) {
 $result = $_SESSION['payment_result'];
 $downloadToken = $result['download_token'];
 
+<<<<<<< HEAD
 if (empty($_SESSION['payment_email_sent'])) {
     $downloadLink = SITE_URL . '/download.php?token=' . urlencode($downloadToken);
     $subject = 'Your Purchase Confirmation - ' . SITE_NAME;
@@ -28,6 +29,8 @@ if (empty($_SESSION['payment_email_sent'])) {
     $_SESSION['payment_email_sent'] = true;
 }
 
+=======
+>>>>>>> 8179ce192d08535196c5e138542df972d599d1ac
 $pageTitle = 'Payment Successful — ' . SITE_NAME;
 require __DIR__ . '/includes/header.php';
 ?>
